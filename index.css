@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+.tela-inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff;
+}
+.tela-inicial img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+.tela-inicial h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.tela-inicial p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+.tela-inicial button {
+  background-color: #22c55e;
+  border: none;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+}
+.tela-inicial button:hover {
+  background-color: #16a34a;
+}
+#interfaceSistema, #manualSorter, #relatoriosSorter {
+  display: none;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+.sidebar {
+  width: 800px;
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-right: 1px solid #000000;
+  overflow-y: auto;
+}
+.sidebar h3 {
+  margin-top: 0;
+}
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+.planta-cd {
+  height: 250px;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.quadros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.quadro {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 5px;
+  width: 190px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.quadro h4 {
+  grid-column: span 2;
+  margin: 0 0 10px;
+}
+.dijuntor {
+  background-color: #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+}
+.dijuntor::before {
+  content: "\eb7b";
+  font-family: 'remixicon';
+  font-size: 18px;
+  color: #10b981;
+}
+.dijuntor.alerta::before {
+  content: "\eb98";
+  color: #ef4444;
+}
+.btn-excluir {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-excluir:hover {
+  background-color: #dc2626;
+}
+#manualSorter, #relatoriosSorter {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+form#formRelatorio {
+  margin-bottom: 20px;
+  width: 80%;
+}
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+}
+fieldset legend {
+  font-weight: bold;
+}
+form#formRelatorio label {
+  display: block;
+  margin-bottom: 10px;
+}
+form#formRelatorio input,
+form#formRelatorio textarea {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+form#formRelatorio button {
+  padding: 10px 20px;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form#formRelatorio button:hover {
+  background-color: #16a34a;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  text-align: left;
+}
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #000000;
+}
